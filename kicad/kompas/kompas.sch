@@ -303,17 +303,6 @@ F 3 "~" H 5600 6100 50  0001 C CNN
 $EndComp
 Text GLabel 6050 6100 2    50   Input ~ 0
 LED2_A_T
-$Comp
-L Device:R R21
-U 1 1 5FE1560E
-P 10500 1550
-F 0 "R21" V 10707 1550 50  0000 C CNN
-F 1 "1k" V 10616 1550 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 10430 1550 50  0001 C CNN
-F 3 "~" H 10500 1550 50  0001 C CNN
-	1    10500 1550
-	0    -1   -1   0   
-$EndComp
 Text GLabel 10850 1550 2    50   Input ~ 0
 OUT0
 Wire Wire Line
@@ -330,7 +319,7 @@ F 3 "" H 10200 950 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Transistor_BJT:2N3904 Q3
+L Transistor_BJT:MMBT3904 Q3
 U 1 1 5FDE4110
 P 10300 750
 F 0 "Q3" H 10491 704 50  0000 L CNN
@@ -390,7 +379,7 @@ F 3 "" H 10300 2150 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Transistor_BJT:2N3904 Q4
+L Transistor_BJT:MMBT3904 Q4
 U 1 1 5FE822FB
 P 10400 1950
 F 0 "Q4" H 10591 1904 50  0000 L CNN
@@ -438,12 +427,12 @@ Wire Wire Line
 $Comp
 L Device:R R19
 U 1 1 5FE8479F
-P 10600 2750
-F 0 "R19" V 10807 2750 50  0000 C CNN
-F 1 "1k" V 10716 2750 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 10530 2750 50  0001 C CNN
-F 3 "~" H 10600 2750 50  0001 C CNN
-	1    10600 2750
+P 9900 2750
+F 0 "R19" V 9800 2750 50  0000 C CNN
+F 1 "1k" V 10016 2750 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 9830 2750 50  0001 C CNN
+F 3 "~" H 9900 2750 50  0001 C CNN
+	1    9900 2750
 	0    -1   -1   0   
 $EndComp
 Text GLabel 10950 2750 2    50   Input ~ 0
@@ -465,7 +454,7 @@ F 3 "" H 10250 3350 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Transistor_BJT:2N3904 Q5
+L Transistor_BJT:MMBT3904 Q5
 U 1 1 5FE8A69F
 P 10350 3150
 F 0 "Q5" H 10541 3104 50  0000 L CNN
@@ -502,12 +491,12 @@ Wire Wire Line
 $Comp
 L Device:R R17
 U 1 1 5FE8A6BE
-P 10550 3950
-F 0 "R17" V 10757 3950 50  0000 C CNN
-F 1 "1k" V 10666 3950 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 10480 3950 50  0001 C CNN
-F 3 "~" H 10550 3950 50  0001 C CNN
-	1    10550 3950
+P 9850 3950
+F 0 "R17" V 9750 3950 50  0000 C CNN
+F 1 "1k" V 9966 3950 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 9780 3950 50  0001 C CNN
+F 3 "~" H 9850 3950 50  0001 C CNN
+	1    9850 3950
 	0    -1   -1   0   
 $EndComp
 Text GLabel 10900 3950 2    50   Input ~ 0
@@ -568,7 +557,7 @@ Text GLabel 1850 5450 2    50   Input ~ 0
 TXO
 Text GLabel 1850 5550 2    50   Input ~ 0
 CLOCK_LED_B
-Text GLabel 1850 5650 2    50   Input ~ 0
+Text GLabel 1850 3950 2    50   Input ~ 0
 LED0
 Text GLabel 1850 5750 2    50   Input ~ 0
 RESET_LED_B
@@ -576,19 +565,19 @@ Text GLabel 1850 5850 2    50   Input ~ 0
 LED1
 Text GLabel 1850 5950 2    50   Input ~ 0
 LED2
-Text GLabel 1850 6050 2    50   Input ~ 0
-PD7
-Text GLabel 1850 3650 2    50   Input ~ 0
-PB0
+Text GLabel 1850 4150 2    50   Input ~ 0
+SCK
+Text GLabel 1850 4050 2    50   Input ~ 0
+MISO
 Text GLabel 1850 3750 2    50   Input ~ 0
 OUT2
 Text GLabel 1850 3850 2    50   Input ~ 0
 OUT1
-Text GLabel 1850 3950 2    50   Input ~ 0
+Text GLabel 1850 5650 2    50   Input ~ 0
 OUT0
-Text GLabel 1850 4050 2    50   Input ~ 0
+Text GLabel 1850 3650 2    50   Input ~ 0
 RESET
-Text GLabel 1850 4150 2    50   Input ~ 0
+Text GLabel 1850 6050 2    50   Input ~ 0
 CLOCK
 $Comp
 L Device:Crystal_GND2 Y1
@@ -630,9 +619,9 @@ Text GLabel 1850 4750 2    50   Input ~ 0
 IN2
 Text GLabel 1850 4850 2    50   Input ~ 0
 POT0_B
-Text GLabel 1850 4950 2    50   Input ~ 0
+Text GLabel 650  3850 0    50   Input ~ 0
 POT1_B
-Text GLabel 1850 5050 2    50   Input ~ 0
+Text GLabel 650  3950 0    50   Input ~ 0
 POT2_B
 Text GLabel 1850 5150 2    50   Input ~ 0
 RST
@@ -739,32 +728,30 @@ $EndComp
 Wire Wire Line
 	2600 4350 2600 4800
 $Comp
-L Connector_Generic:Conn_01x06 J5
+L Connector_Generic:Conn_01x07 J5
 U 1 1 5FB7029D
-P 3700 5850
-F 0 "J5" H 3780 5842 50  0000 L CNN
-F 1 "Conn_01x06" H 3780 5751 50  0000 L CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Vertical" H 3700 5850 50  0001 C CNN
-F 3 "~" H 3700 5850 50  0001 C CNN
-	1    3700 5850
+P 3700 5950
+F 0 "J5" H 3780 5942 50  0000 L CNN
+F 1 "Conn_01x07" H 3780 5851 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x07_P2.54mm_Vertical" H 3700 5950 50  0001 C CNN
+F 3 "~" H 3700 5950 50  0001 C CNN
+	1    3700 5950
 	1    0    0    -1  
 $EndComp
 Text GLabel 3500 5850 0    50   Input ~ 0
 RXI
 Text GLabel 3500 5750 0    50   Input ~ 0
 TXO
-Wire Wire Line
-	3500 6050 3500 6150
 $Comp
 L power:GND #PWR0135
 U 1 1 5FB7BF92
-P 3500 6150
-F 0 "#PWR0135" H 3500 5900 50  0001 C CNN
-F 1 "GND" H 3505 5977 50  0000 C CNN
-F 2 "" H 3500 6150 50  0001 C CNN
-F 3 "" H 3500 6150 50  0001 C CNN
-	1    3500 6150
-	1    0    0    -1  
+P 3500 6050
+F 0 "#PWR0135" H 3500 5800 50  0001 C CNN
+F 1 "GND" H 3505 5877 50  0000 C CNN
+F 2 "" H 3500 6050 50  0001 C CNN
+F 3 "" H 3500 6050 50  0001 C CNN
+	1    3500 6050
+	0    1    1    0   
 $EndComp
 Text GLabel 2700 5950 0    50   Input ~ 0
 RST
@@ -779,7 +766,6 @@ F 3 "~" H 2700 5800 50  0001 C CNN
 	1    2700 5800
 	1    0    0    -1  
 $EndComp
-Connection ~ 3500 6150
 Wire Wire Line
 	3500 5650 2700 5650
 $Comp
@@ -821,9 +807,9 @@ F 3 "~" H 6550 1150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text GLabel 6850 1050 2    50   Input ~ 0
-PB0
+MISO
 Text GLabel 6350 1050 0    50   Input ~ 0
-PD7
+SCK
 Text GLabel 6350 1150 0    50   Input ~ 0
 LED2
 Text GLabel 6350 1250 0    50   Input ~ 0
@@ -848,7 +834,7 @@ F 3 "" H 7600 2050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Transistor_BJT:2N3904 Q1
+L Transistor_BJT:MMBT3904 Q1
 U 1 1 5FCED9AF
 P 7500 2250
 F 0 "Q1" H 7691 2204 50  0000 L CNN
@@ -985,7 +971,7 @@ F 3 "~" H 6850 3400 50  0001 C CNN
 $EndComp
 Connection ~ 7600 3600
 $Comp
-L Transistor_BJT:2N3904 Q2
+L Transistor_BJT:MMBT3904 Q2
 U 1 1 5FC5D058
 P 7500 3400
 F 0 "Q2" H 7691 3354 50  0000 L CNN
@@ -1022,8 +1008,6 @@ NoConn ~ 5800 2150
 NoConn ~ 9750 2650
 NoConn ~ 9650 1450
 NoConn ~ 9700 3850
-NoConn ~ 650  3850
-NoConn ~ 650  3950
 NoConn ~ 1600 2750
 $Comp
 L eurocad:PJ301M-12 J_IN2
@@ -1220,17 +1204,17 @@ Text GLabel 6700 2250 0    50   Input ~ 0
 RESET_B
 Text GLabel 6700 3400 0    50   Input ~ 0
 CLOCK_B
-Text GLabel 9650 1550 2    50   Input ~ 0
+Text GLabel 9950 1550 2    50   Input ~ 0
 OUT0_T
-Text GLabel 10350 1550 0    50   Input ~ 0
+Text GLabel 10650 1550 0    50   Input ~ 0
 OUT0_B
-Text GLabel 9750 2750 2    50   Input ~ 0
+Text GLabel 10050 2750 2    50   Input ~ 0
 OUT1_T
-Text GLabel 10450 2750 0    50   Input ~ 0
+Text GLabel 10750 2750 0    50   Input ~ 0
 OUT1_B
-Text GLabel 9700 3950 2    50   Input ~ 0
+Text GLabel 10000 3950 2    50   Input ~ 0
 OUT2_T
-Text GLabel 10400 3950 0    50   Input ~ 0
+Text GLabel 10700 3950 0    50   Input ~ 0
 OUT2_B
 Text GLabel 7650 4500 2    50   Input ~ 0
 OUT_LED0_T
@@ -1851,4 +1835,23 @@ Text GLabel 1800 1700 2    50   Input ~ 0
 GND_T
 Text GLabel 1800 2550 2    50   Input ~ 0
 GND_T
+Text GLabel 1850 4950 2    50   Input ~ 0
+SDA
+Text GLabel 1850 5050 2    50   Input ~ 0
+SCL
+Text GLabel 3500 6250 0    50   Input ~ 0
+SCL
+Text GLabel 3500 6150 0    50   Input ~ 0
+SDA
+$Comp
+L Device:R R21
+U 1 1 5FE1560E
+P 9800 1550
+F 0 "R21" V 9700 1550 50  0000 C CNN
+F 1 "1k" V 9916 1550 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 9730 1550 50  0001 C CNN
+F 3 "~" H 9800 1550 50  0001 C CNN
+	1    9800 1550
+	0    -1   -1   0   
+$EndComp
 $EndSCHEMATC
