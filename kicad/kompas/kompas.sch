@@ -561,7 +561,7 @@ Text GLabel 1850 3950 2    50   Input ~ 0
 LED0
 Text GLabel 1850 5750 2    50   Input ~ 0
 RESET_LED_B
-Text GLabel 1850 5850 2    50   Input ~ 0
+Text GLabel 1850 3850 2    50   Input ~ 0
 LED1
 Text GLabel 1850 5950 2    50   Input ~ 0
 LED2
@@ -571,7 +571,7 @@ Text GLabel 1850 4050 2    50   Input ~ 0
 MISO
 Text GLabel 1850 3750 2    50   Input ~ 0
 OUT2
-Text GLabel 1850 3850 2    50   Input ~ 0
+Text GLabel 1850 5850 2    50   Input ~ 0
 OUT1
 Text GLabel 1850 5650 2    50   Input ~ 0
 OUT0
