@@ -1,8 +1,8 @@
 expose for programming:
-MOSI (PB3)
-MISO (PB4)
-SCK (PB5)
-RESET (PC6)
+MOSI (PB3) 15
+MISO (PB4) 16
+SCK (PB5) 17
+RESET (PC6) 29
 
 
 expose for DAC
