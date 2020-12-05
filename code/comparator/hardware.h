@@ -3,8 +3,8 @@
 
 // Kompas Hardware
 
-#define clockIn PINB&B00100000
-#define resetIn PINB&B00010000
+#define clockInState PINB&B00100000
+#define resetInState PINB&B00010000
 
 // Port mapping for outputs Longitude, altitude, latitude
 #define trigOut0 PINB&B00001000

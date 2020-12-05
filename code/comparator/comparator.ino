@@ -14,7 +14,7 @@ void setup() {
   // set pins PB7, PB6, PB3 (longitude), PB2 (altitude), PB1 (latitude) as outputs, PB0 as input
   DDRB = B11001110;
   PORTB | B00000001;
-  //PB0 internal pullup resistor
+  // PB0 internal pullup resistor
   PINB |= B00000001;
 
   // set pins PD7, PD6, PD5, PD4, PD3, PD2 as outputs, leaves PD1 and PD0 as default (ftdi)
@@ -29,22 +29,16 @@ void setup() {
   pinMode(led0, OUTPUT);
   pinMode(led1, OUTPUT);
   pinMode(led2, OUTPUT);
-
-  trigLength = 5;
 }
 
 void loop() {
-  // enables clock and reset functions
-  deClock();
-  deReset();
-
-  // read CV input
-  signalCV = analogRead(A0);
-  shiftCV = analogRead(A1);
+  // on my hardware the top cv in is A1
+  signalCV = analogRead(A1);
+  shiftCV = analogRead(A0);
   sizeCV = analogRead(A2);
 
   // read values from pots
-  /* pot0 = analogRead(A3); */
+  probPot = analogRead(A3);
   shiftPot = analogRead(A4);
   sizePot = analogRead(A5);
 
@@ -65,7 +59,7 @@ void loop() {
     inRange = false;
   }
 
-  if (clockIn) {
+  if (clockInState) {
     if (!inClock) {
       digitalWrite(clock_led, HIGH);
     }
@@ -75,7 +69,7 @@ void loop() {
     inClock = false;
   }
 
-  if (inRange && clockIn) {
+  if (inRange && clockInState) {
     if (!inAnd) {
       PINB |= B00000100;
     }
@@ -83,5 +77,15 @@ void loop() {
   } else {
     PORTB &= B11111011;
     inAnd = false;
+  }
+
+  if (inRange != (!!clockInState)) {
+    if (!inXor) {
+      PINB |= B00000010;
+    }
+    inXor = true;
+  } else {
+    PORTB &= B11111101;
+    inXor = false;
   }
 }
