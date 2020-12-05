@@ -5,7 +5,6 @@
 
 #include <EEPROM.h>
 #include "hardware.h"
-#include "definitions.h"
 #include "variables.h"
 
 void setup() {
@@ -38,7 +37,7 @@ void loop() {
   sizeCV = analogRead(A2);
 
   // read values from pots
-  probPot = analogRead(A3);
+  samplePot = analogRead(A3);
   shiftPot = analogRead(A4);
   sizePot = analogRead(A5);
 
@@ -47,16 +46,21 @@ void loop() {
 
   top = shift + (size / 2);
   bottom = shift - (size / 2);
-  /* Serial.println("shift\t" + String(shift) + "\tsize\t" + String(size) + "\tsignalCV\t" + String(signalCV)); */
 
-  if (signalCV >= bottom && signalCV <= top) {
-    if (!inRange) {
-      PINB |= B00001000;
+  // Serial.println("shift\t" + String(shift) + "\tsize\t" + String(size) + "\tsignalCV\t" + String(signalCV));
+
+  sampleAt = samplePot >> 4;
+  step = (step + 1) % sampleAt;
+  if (!sampleAt || step == 0) {
+    if (signalCV >= bottom && signalCV <= top) {
+      if (!inRange) {
+        PINB |= B00001000;
+      }
+      inRange = true;
+    } else {
+      PORTB &= B11110111;
+      inRange = false;
     }
-    inRange = true;
-  } else {
-    PORTB &= B11110111;
-    inRange = false;
   }
 
   if (clockInState) {
@@ -79,7 +83,8 @@ void loop() {
     inAnd = false;
   }
 
-  if (inRange != (!!clockInState)) {
+
+  if (inRange != (!(!(clockInState)))) {
     if (!inXor) {
       PINB |= B00000010;
     }

@@ -10,6 +10,7 @@ int sizeCV = 0;
 int range = 0;
 int top, bottom;
 int shift, size;
+int step, sampleAt;
 
 // track on-state to not retrigger stuff
 bool inRange = 0;
@@ -18,7 +19,7 @@ bool inXor = 0;
 bool inClock = 0;
 
 // pot positions
-int probPot = 0;
+int samplePot = 0;
 int shiftPot = 0;
 int sizePot = 0;
 
