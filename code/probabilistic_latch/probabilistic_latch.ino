@@ -1,6 +1,19 @@
 /*
    Alternative probabilistic latch / burst firmware for stziopa/bastl-instruments Kompas hardware
    licensed under CC-BY-SA by Phillip Mates 2020-12-11
+
+knobs
+-------------
+(burst count)  o
+(latch A prob) o
+(latch B prob) o
+
+jacks
+-------------
+(burst trigger)     o  |  o   (latch A trigger)
+(burst length)      o  |  o   (burst out)
+(latch A prob)      o  |  o   (latch A out
+(latch B trigger)   o  |  o   (latch B out)
 */
 
 #include <EEPROM.h>
@@ -11,7 +24,7 @@
 void setup() {
   Serial.begin(9600);
 
-  // set pins PB7, PB6, PB3 (longitude), PB2 (altitude), PB1 (latitude) as outputs, PB0 as input
+  // set pins PB7, PB6, PB3, PB2, PB1  as outputs, PB0 as input
   DDRB = B11001110;
   PORTB | B00000001;
   // PB0 internal pullup resistor
@@ -34,8 +47,8 @@ void setup() {
 }
 
 bool latchAOn, latchBOn;
-uint8_t burstLength = 15;
-uint8_t burstCount, burstsLeft;
+uint8_t burstLengthBase = 100;
+uint8_t burstCount, burstsLeft, burstLength;
 unsigned long now;
 
 void loop() {
@@ -84,6 +97,7 @@ void loop() {
   }
 
   burstCount = burstPot / 128;
+  burstLength = burstLengthBase + ((burstCV / 64) * burstLengthBase);
 
   // start bursts
   if (burstState) {
