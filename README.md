@@ -26,7 +26,7 @@ This project is based off the ATMEGA328-AU chip, which has 2 additional analog i
 
 ### different pins
 
-It is easiest to check the code or schematics but the pot 1 and 2 use the A6 and A7 analog pins that come extra in the SMD version of the ATMEGA328.
+It is easiest to check the code or schematics. This was done to cleanly expose the ICSP headers and serial pins.
 
 ### more exposed pins for extensions
 
@@ -69,3 +69,9 @@ Dual latch + single burst generator. The latches have probability modulation for
  - direct copy of Bastl version but in SMD.
  - has some bugs that require custom connections after.
  - flashing arduino bootloader requires soldering jumpers straight to SMD components.
+
+## License
+
+The original (Bastl Kompas)[https://github.com/bastl-instruments/kompas] is CC-BY-SA and this work perpetuates that.
+
+Utmost thanks to the original designers for making their work available!
