@@ -778,12 +778,12 @@ F 3 "~" H 3050 5800 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Connector_Generic:Conn_02x05_Odd_Even J4
+L Connector_Generic:Conn_02x04_Odd_Even J4
 U 1 1 5FBD8451
 P 6550 1150
 F 0 "J4" H 6600 1567 50  0000 C CNN
 F 1 "Conn_02x05_Odd_Even" H 6600 1476 50  0000 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_2x05_P2.54mm_Vertical" H 6550 1150 50  0001 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_2x04_P2.54mm_Vertical" H 6550 1150 50  0001 C CNN
 F 3 "~" H 6550 1150 50  0001 C CNN
 	1    6550 1150
 	1    0    0    -1  
@@ -1557,41 +1557,6 @@ Text GLabel 4150 3900 1    50   Input ~ 0
 VCC_T
 Text GLabel 4900 3900 1    50   Input ~ 0
 VCC_T
-$Comp
-L power:GND #PWR0137
-U 1 1 5FBF4D2E
-P 7500 950
-F 0 "#PWR0137" H 7500 700 50  0001 C CNN
-F 1 "GND" H 7505 777 50  0000 C CNN
-F 2 "" H 7500 950 50  0001 C CNN
-F 3 "" H 7500 950 50  0001 C CNN
-	1    7500 950 
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	6850 950  7200 950 
-$Comp
-L Device:Polyfuse F2
-U 1 1 5FBEA82F
-P 7350 950
-F 0 "F2" V 7125 950 50  0000 C CNN
-F 1 "Polyfuse" V 7216 950 50  0000 C CNN
-F 2 "Fuse:Fuse_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 7400 750 50  0001 L CNN
-F 3 "~" H 7350 950 50  0001 C CNN
-	1    7350 950 
-	0    1    1    0   
-$EndComp
-$Comp
-L power:+5V #PWR0138
-U 1 1 5FC001E5
-P 6350 950
-F 0 "#PWR0138" H 6350 800 50  0001 C CNN
-F 1 "+5V" H 6365 1123 50  0000 C CNN
-F 2 "" H 6350 950 50  0001 C CNN
-F 3 "" H 6350 950 50  0001 C CNN
-	1    6350 950 
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	6750 6650 6750 6600
 $Comp

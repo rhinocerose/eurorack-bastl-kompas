@@ -1,4 +1,4 @@
-19055213414055246
+19068075183093669
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -83026,6 +83026,13 @@ varistor SIOV
 0
 2
 2
+eink
+1028
+
+
+0
+14
+13
 eurocad
 Alpha9mmPot
 
@@ -83104,12 +83111,47 @@ TL1105SPF250Q
 4
 4
 graphics
+Mukou Hanabishi
+
+
+0
+0
+0
+graphics
+Mukou Hanabishi_CU
+
+
+0
+0
+0
+graphics
+Onimen Hiragi
+
+
+0
+0
+0
+graphics
+Onimen Hiragi_CU
+
+
+0
+0
+0
+graphics
 PJ301M-12-2hole
 
 
 0
 2
 2
+graphics
+Potentiometer_Runtron_RM-065_Vertical
+Potentiometer, vertical, Trimmer, RM-065 http://www.runtron.com/down/PDF%20Datasheet/Carbon%20Film%20Potentiometer/RM065%20RM063.pdf
+Potentiometer Trimmer RM-065
+0
+3
+3
 graphics
 buttons
 
@@ -83196,6 +83238,20 @@ shrimp
 0
 graphics
 shrimp_mask
+
+
+0
+0
+0
+graphics
+triangles
+
+
+0
+0
+0
+graphics
+triangles_solder
 
 
 0
