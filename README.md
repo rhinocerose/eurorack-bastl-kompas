@@ -1,3 +1,5 @@
+# Cloned from https://git.sr.ht/~philomates/kompas
+
 # SMD version of Bastl Kompas
 
 As an attempt to learn kicad I decided to take the open source Bastl Kompas eurorack module, which is a 5hp through-hole soldering project, and redesign it as a 4hp SMD soldering project.
